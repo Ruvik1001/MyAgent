@@ -149,6 +149,10 @@ activemq-data/
 # SageMath parsed files
 *.sage.py
 
+# рабочий журнал смены и кэш индекса
+data/
+_probe_chat.py
+
 # Environments
 .env
 .envrc

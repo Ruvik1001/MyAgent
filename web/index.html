@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Север-Вышка · Дежурный ЦУП</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Север-Вышка · 124.7</div>
+    <div class="meta">район «Север» · вахта 20:00–08:00 · журнал открыт</div>
+    <div class="clock">ТАБЛО <strong id="clock">21:16</strong></div>
+  </header>
+  <main>
+    <section class="col">
+      <h2>Журнал смены</h2>
+      <div class="scroll" id="log"><div class="empty">Пока пусто. Дежурный пишет сюда сам.</div></div>
+    </section>
+    <section class="col chat">
+      <h2>Эфир</h2>
+      <div id="thread"></div>
+      <div class="composer">
+        <div class="hints">
+          <button type="button" data-q="Где Сокол-17? Что в журнале про последний выход?">Сокол-17</button>
+          <button type="button" data-q="Можно вызвать ещё раз прямо сейчас?">Вызов</button>
+          <button type="button" data-q="Какая погода по трассе на Архангельск и к Камню?">Погода</button>
+          <button type="button" data-q="Кто такой Тихий и можно ли ему отвечать?">Тихий</button>
+        </div>
+        <div class="row">
+          <input id="input" autocomplete="off" placeholder="в эфир…">
+          <button type="button" id="send">Передать</button>
+          <button type="button" id="reset">Смена</button>
+        </div>
+      </div>
+    </section>
+    <section class="col">
+      <h2>Табло</h2>
+      <div class="scroll">
+        <div class="board-item">
+          <div class="lbl">Статус</div>
+          <div class="val silence" id="silence">ТИШИНА ЭФИРА</div>
+        </div>
+        <div class="board-item">
+          <div class="lbl">Сводка</div>
+          <div class="val weather" id="weather">нет запроса</div>
+        </div>
+        <div class="board-item">
+          <div class="lbl">Позывные</div>
+          <div id="callsigns"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>Руднев Виктор Владимирович, М8О-205СВ-25 · Крючков Артемий Владимирович, М8О-205СВ-25</span>
+    <span>дежурный не болтает без журнала</span>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
